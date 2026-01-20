@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:task_manager_app/screens/task_list_screen.dart';
-import 'package:provider/provider.dart';
-import 'package:task_manager_app/viewmodels/task_view_model.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (_) => TaskViewModel()..loadInitialTask(),
-      child:const MyApp())
-    );
+    
+      const ProviderScope(
+      child: MyApp(),
+    ),
+      );
     
     
 }
