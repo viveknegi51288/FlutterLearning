@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:provider/provider.dart';
 import 'package:task_manager_app/providers/task_provider.dart';
-import 'package:task_manager_app/viewmodels/task_view_model.dart';
 
 class TaskListScreen extends ConsumerWidget{
   const TaskListScreen({super.key});
@@ -51,7 +49,6 @@ if (index == state.tasks.length) {
                 value: task.isCompleted,
                 onChanged: (_) => notifier.toggleTask(index),
               )
-
 
     );
   }

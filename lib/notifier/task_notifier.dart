@@ -2,7 +2,7 @@ import 'package:flutter_riverpod/legacy.dart';
 import 'package:task_manager_app/services/task_service.dart';
 import 'package:task_manager_app/state/task_state.dart';
 
-class TaskNotifier  extends StateNotifier<TaskState>
+class TaskNotifier extends StateNotifier<TaskState>
 
 {
 
@@ -30,9 +30,6 @@ catch(e)
 state = state.copyWith(isLoading: false);
 
   }
-
-
-
    Future<void> loadMoreTasks() async {
 
     if(state.isFetchingMore || !state.hasMore) return;
